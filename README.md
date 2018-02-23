@@ -4,7 +4,7 @@ Tracking system to log Zoo Animal information including age, name, species, beha
 ## Setup Up
 In the terminal run these commands:
 ```
-$ git clone https://github.com/thebyronc/
+$ git clone https://github.com/thebyronc/AnimalTracker.git
 //go to root cloned folder
 $ npm install
 $ bower install

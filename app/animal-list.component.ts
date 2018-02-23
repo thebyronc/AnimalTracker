@@ -9,23 +9,23 @@ import { Animal } from './animal.model';
     <option value="1">Young Residents (Age < 2)</option>
     <option value="2">Mature Residents (Age >= 2)</option>
   </select>
-  <div class="alert alert-primary" role="alert">
-  TEst
+  <div class="card" style="width: 18rem;" *ngFor="let currentAnimal of childAnimalList | age:filterByAge">
+    <div class="card-body">
+      <h5 class="card-title">{{currentAnimal.name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{currentAnimal.species}}</h6>
+      <p class="card-text">
+        Age: {{currentAnimal.age}}
+        Diet: {{currentAnimal.diet}}<br>
+        Location: {{currentAnimal.location}}<br>
+        Number Of Caretakers: {{currentAnimal.caretakers}}<br>
+        Sex: {{currentAnimal.sex}}<br>
+        Likes: {{currentAnimal.likes}}<br>
+        Dislikes: {{currentAnimal.dislikes}}<br>
+        <a href="#" (click)="editButtonHasBeenClicked(currentAnimal)">Edit</a>
+      </p>
+    </div>
   </div>
-  <ul>
-    <li *ngFor="let currentAnimal of childAnimalList | age:filterByAge">
-      Species: {{currentAnimal.species}}<br>
-      Name: {{currentAnimal.name}}<br>
-      Age: {{currentAnimal.age}}<br>
-      Diet: {{currentAnimal.diet}}<br>
-      Location: {{currentAnimal.location}}<br>
-      Number Of Caretakers: {{currentAnimal.caretakers}}<br>
-      Sex: {{currentAnimal.sex}}<br>
-      Likes: {{currentAnimal.likes}}<br>
-      Dislikes: {{currentAnimal.dislikes}}<br>
-      <a href="#" (click)="editButtonHasBeenClicked(currentAnimal)">Edit</a>
-    </li>
-  </ul>
+
   `
 })
 

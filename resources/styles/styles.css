@@ -2,3 +2,20 @@ body {
   /* background-color: #292929;
   color: #FFFFFF; */
 }
+
+.custom-select {
+  width: 325px;
+}
+.formInput {
+  width: 500px;
+}
+
+.btn-primary {
+  background-color: #F5A503;
+  border-color: #F5A503;
+}
+.btn-primary:hover {
+  background-color: #FFE127;
+  border-color: #FFE127;
+  color: #F2385A;
+}

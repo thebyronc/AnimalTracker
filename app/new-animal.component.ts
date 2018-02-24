@@ -43,13 +43,6 @@ import { Animal } from './animal.model';
     </div>
 
     <div class="form-group row">
-      <label for="location" class="col-sm-2 col-form-label">Location:</label>
-      <div class="col-sm-10">
-        <input class="form-control" #newLocation>
-      </div>
-    </div>
-
-    <div class="form-group row">
       <label for="caretakers" class="col-sm-2 col-form-label">Caretakers:</label>
       <div class="col-sm-10">
         <input class="form-control" type="number" #newCaretakers>

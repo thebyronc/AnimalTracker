@@ -6,9 +6,17 @@ import { Animal } from './animal.model';
   template: `
   <div class="container">
     <h1>OREGON ZOO ANIMAL RESIDENTS</h1>
-    <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
+    <div class="row">
+      <div class="col-sm">
+        <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
+      </div>
+      <div class="col-sm">
+        <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
+      </div>
+  </div>
+
     <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
-    <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
+
   </div>
   `
 })
